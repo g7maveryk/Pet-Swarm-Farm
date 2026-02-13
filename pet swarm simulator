@@ -1,7 +1,9 @@
 --[[
-    Script transformado para Rayfield
-    Remoção total de emojis e informações desnecessárias
-    Anti 404 incluído (remoção do popup de coins)
+    MAVERICK HUB - OTIMIZADO
+    - Anti popup de coins (404 bloqueado)
+    - FPS Boost extremo (remove gráficos, sombras, partículas)
+    - Farms otimizadas (menos threads, mais leve)
+    - Interface Rayfield limpa e rápida
 --]]
 
 -- Carregar Rayfield
@@ -11,7 +13,8 @@ local Rayfield = loadstring(game:HttpGet("https://sirius.menu/rayfield"))()
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Workspace = game:GetService("Workspace")
-local UserInputService = game:GetService("UserInputService")
+local Lighting = game:GetService("Lighting")
+local RunService = game:GetService("RunService")
 local CoreGui = game:GetService("CoreGui")
 local LogService = game:GetService("LogService")
 local StarterGui = game:GetService("StarterGui")
@@ -19,29 +22,22 @@ local StarterGui = game:GetService("StarterGui")
 -- LocalPlayer
 local LocalPlayer = Players.LocalPlayer
 
--- Remotes
-local Remotes = ReplicatedStorage:FindFirstChild("Remotes")
-if not Remotes then return end
-
-local Events = Remotes:FindFirstChild("Events")
-local Functions = Remotes:FindFirstChild("Functions")
-if not Events or not Functions then return end
-
--- Bloqueio total do popup de coins (anti 404)
+-- ========== BLOQUEIO POPUP DE COINS (ANTI 404) ==========
 local function blockCurrencyPopup()
-    -- Remove o remote original se existir
+    local Events = ReplicatedStorage:FindFirstChild("Remotes") and ReplicatedStorage.Remotes:FindFirstChild("Events")
+    if not Events then return end
+
+    -- Remove remote original e cria um fake
     local currencyRemote = Events:FindFirstChild("UpdateCurrency")
     if currencyRemote then
         currencyRemote:Destroy()
     end
-
-    -- Cria um remote falso que não faz nada
     local fakeRemote = Instance.new("RemoteEvent")
     fakeRemote.Name = "UpdateCurrency"
     fakeRemote.Parent = Events
     fakeRemote.OnClientEvent:Connect(function() end)
 
-    -- Remove scripts que geram popups
+    -- Remove scripts que geram popup
     local playerScripts = LocalPlayer and LocalPlayer:FindFirstChild("PlayerScripts")
     if playerScripts then
         for _, v in ipairs(playerScripts:GetDescendants()) do
@@ -57,7 +53,7 @@ local function blockCurrencyPopup()
     end
 
     -- Remove qualquer CurrencyPopUp que aparecer
-    local function destroyPopUps(container)
+    local function killPopUps(container)
         for _, v in ipairs(container:GetDescendants()) do
             if v.Name == "CurrencyPopUp" then
                 pcall(v.Destroy, v)
@@ -65,7 +61,6 @@ local function blockCurrencyPopup()
         end
     end
 
-    -- Conexões para remoção instantânea
     CoreGui.ChildAdded:Connect(function(child)
         if child.Name == "CurrencyPopUp" then
             child:Destroy()
@@ -80,28 +75,80 @@ local function blockCurrencyPopup()
         end)
     end
 
-    -- Loop de varredura contínua
     task.spawn(function()
         while task.wait(0.5) do
-            destroyPopUps(CoreGui)
+            killPopUps(CoreGui)
             local pg = LocalPlayer and LocalPlayer:FindFirstChild("PlayerGui")
-            if pg then
-                destroyPopUps(pg)
-            end
+            if pg then killPopUps(pg) end
         end
     end)
 end
 
 blockCurrencyPopup()
 
--- Limpa o console a cada 2 segundos
+-- ========== FPS BOOST (MÁXIMA OTIMIZAÇÃO) ==========
+local fpsBoostActive = false
+local originalSettings = {} -- para restaurar (opcional)
+
+local function applyFPSBoost(enable)
+    if enable then
+        -- Qualidade gráfica mínima
+        settings().Rendering.QualityLevel = 1
+
+        -- Desabilitar sombras globais
+        Lighting.GlobalShadows = false
+        Lighting.FogEnd = 9e9
+        Lighting.Brightness = 2
+
+        -- Remover decalques e partículas do Workspace (recursivo, só uma vez)
+        if not fpsBoostActive then
+            local function removeGraphics(instance)
+                if instance:IsA("Decal") or instance:IsA("Texture") or instance:IsA("ParticleEmitter") or instance:IsA("Trail") or instance:IsA("Smoke") or instance:IsA("Fire") or instance:IsA("Sparkles") then
+                    pcall(instance.Destroy, instance)
+                elseif instance:IsA("BasePart") and instance.Material == Enum.Material.ForceField then
+                    instance.Material = Enum.Material.Plastic
+                end
+            end
+
+            for _, v in ipairs(Workspace:GetDescendants()) do
+                removeGraphics(v)
+            end
+
+            Workspace.DescendantAdded:Connect(removeGraphics)
+        end
+
+        -- Otimizar renderização
+        RunService:Set3dRenderingEnabled(true) -- não desabilitar, só reduzir
+        Workspace.DescendantAdded:Connect(function(child)
+            if child:IsA("BasePart") and not child:IsA("Terrain") then
+                child.Material = Enum.Material.Plastic
+                child.Reflectance = 0
+            end
+        end)
+
+        fpsBoostActive = true
+        Rayfield:Notify({Title = "FPS Boost", Content = "Gráficos ultra reduzidos", Duration = 2})
+    else
+        -- Restaurar configurações padrão (opcional)
+        settings().Rendering.QualityLevel = 4
+        Lighting.GlobalShadows = true
+        Lighting.FogEnd = 100000
+        fpsBoostActive = false
+        Rayfield:Notify({Title = "FPS Boost", Content = "Gráficos normais restaurados", Duration = 2})
+    end
+end
+
+-- Aplica boost imediatamente ao carregar (pode ser desativado depois)
+applyFPSBoost(true)
+
+-- Limpa o console periodicamente (leve)
 task.spawn(function()
-    while task.wait(2) do
+    while task.wait(5) do
         LogService:ClearOutput()
     end
 end)
 
--- Configurações padrão
+-- ========== CONFIGURAÇÕES DAS FARMS ==========
 local config = {
     autoPlant = false,
     plantBurstCount = 9,
@@ -119,7 +166,7 @@ local config = {
     foodDelay = 0.2,
 }
 
--- Dados dos ovos
+-- Dados
 local eggData = {
     { name = "Summer Egg", zone = "SummerEvent1" },
     { name = "Winter Egg", zone = "WinterEvent1" },
@@ -132,7 +179,6 @@ local eggData = {
     { name = "Desert Egg", zone = "6" },
 }
 
--- Lista de chefes
 local bossList = {
     { name = "Naga", zone = "Zone2B1", special = false },
     { name = "Lava Monster", zone = "Zone5B1", special = false },
@@ -146,18 +192,11 @@ local bossList = {
     { name = "Great Sphinx", zone = "ElementEventZoneB1", special = false },
 }
 
--- Estado dos ovos e chefes
 local eggsSelected = {}
 local bossEnabled = {}
-for _, boss in ipairs(bossList) do
-    bossEnabled[boss.name] = false
-end
-
--- Cooldown dos chefes
+for _, boss in ipairs(bossList) do bossEnabled[boss.name] = false end
 local bossCooldown = {}
-for _, boss in ipairs(bossList) do
-    bossCooldown[boss.name] = 0
-end
+for _, boss in ipairs(bossList) do bossCooldown[boss.name] = 0 end
 
 -- Cache de zonas
 local cacheZones = {}
@@ -167,40 +206,35 @@ local function getZone(zoneName)
     end
     return cacheZones[zoneName]
 end
-
--- Limpa cache a cada 45s
-task.spawn(function()
-    while task.wait(45) do
-        cacheZones = {}
-    end
-end)
+task.spawn(function() while task.wait(45) do cacheZones = {} end end)
 
 -- Utilitários
 local function getPets()
-    if not LocalPlayer.Character then return {} end
-    local pets = LocalPlayer.Character:FindFirstChild("Pets")
-    return pets and pets:GetChildren() or {}
+    return LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("Pets") and LocalPlayer.Character.Pets:GetChildren() or {}
 end
 
 local function findNilBoss(name)
     for _, v in pairs(getnilinstances()) do
-        if v.ClassName == "Vector3Value" and v.Name == name then
-            return v
-        end
+        if v.ClassName == "Vector3Value" and v.Name == name then return v end
     end
-    return nil
 end
 
--- Remotes usados nas farms
-local CombatRF = Functions:FindFirstChild("CombatRF")
-local CollectionRF = Functions:FindFirstChild("CollectionRF")
-local HatchEggEvent = Events:FindFirstChild("HatchEggEvent")
-local PlantEggEvent = Events:FindFirstChild("PlantEggEvent")
-local ZonesRF = Functions:FindFirstChild("ZonesRF")
-local FeedEggEvent = Events:FindFirstChild("FeedEggEvent")
+-- Remotes
+local Remotes = ReplicatedStorage:FindFirstChild("Remotes")
+local Events, Functions
+if Remotes then
+    Events = Remotes:FindFirstChild("Events")
+    Functions = Remotes:FindFirstChild("Functions")
+end
+local CombatRF = Functions and Functions:FindFirstChild("CombatRF")
+local CollectionRF = Functions and Functions:FindFirstChild("CollectionRF")
+local HatchEggEvent = Events and Events:FindFirstChild("HatchEggEvent")
+local PlantEggEvent = Events and Events:FindFirstChild("PlantEggEvent")
+local ZonesRF = Functions and Functions:FindFirstChild("ZonesRF")
+local FeedEggEvent = Events and Events:FindFirstChild("FeedEggEvent")
 
--- Flags de controle das threads
-local threadFlags = {
+-- Controle de execução (threads)
+local activeLoops = {
     plant = false,
     hash = false,
     feed = false,
@@ -209,64 +243,52 @@ local threadFlags = {
     food = false,
 }
 
--- ========== LOOPS ==========
-
--- Plantar ovos
+-- ========== LOOPS OTIMIZADOS (SEM CRIAÇÃO EXCESSIVA DE THREADS) ==========
 local function plantLoop()
-    while threadFlags.plant and config.autoPlant do
+    while activeLoops.plant and config.autoPlant do
         for zone, _ in pairs(eggsSelected) do
             for _ = 1, config.plantBurstCount do
-                if not threadFlags.plant then break end
-                task.spawn(function()
-                    pcall(PlantEggEvent.FireServer, PlantEggEvent, zone)
-                end)
+                if not activeLoops.plant then break end
+                PlantEggEvent:FireServer(zone)
             end
-            if config.plantBurstDelay > 0 then
-                task.wait(config.plantBurstDelay)
-            end
+            if config.plantBurstDelay > 0 then task.wait(config.plantBurstDelay) end
         end
         task.wait(0.02)
     end
 end
 
--- Chocar ovos (hash)
 local function hashLoop()
-    while threadFlags.hash and config.autoHash do
+    while activeLoops.hash and config.autoHash do
         for _ = 1, config.hashCount do
-            if not threadFlags.hash then break end
-            pcall(HatchEggEvent.FireServer, HatchEggEvent)
+            if not activeLoops.hash then break end
+            HatchEggEvent:FireServer()
             task.wait(config.hashDelay)
         end
         task.wait(config.hashDelay)
     end
 end
 
--- Alimentar ninhos
 local function feedLoop()
-    while threadFlags.feed and config.autoFeedNests do
+    while activeLoops.feed and config.autoFeedNests do
         local nests = Workspace:FindFirstChild("Nests")
         if nests and FeedEggEvent then
             for _, nest in ipairs(nests:GetChildren()) do
-                if not threadFlags.feed then break end
-                task.spawn(function()
-                    pcall(FeedEggEvent.FireServer, FeedEggEvent, nest)
-                end)
+                if not activeLoops.feed then break end
+                FeedEggEvent:FireServer(nest)
             end
         end
         task.wait(config.feedDelay)
     end
 end
 
--- Farm de chefes
 local function bossLoop()
-    while threadFlags.boss and config.farmBosses do
-        local success = pcall(function()
-            local pets = getPets()
-            if #pets == 0 then return end
+    while activeLoops.boss and config.farmBosses do
+        local pets = getPets()
+        if #pets > 0 then
             local now = os.clock()
             local petCycle = 0
             for _, boss in ipairs(bossList) do
-                if not threadFlags.boss then break end
+                if not activeLoops.boss then break end
                 if bossEnabled[boss.name] and now - bossCooldown[boss.name] >= config.bossDelay then
                     if boss.special then
                         pcall(ZonesRF.InvokeServer, ZonesRF, "RequestZoneMap", boss.zone)
@@ -276,119 +298,82 @@ local function bossLoop()
                         enemy = findNilBoss(boss.name)
                     else
                         local zoneObj = getZone(boss.zone)
-                        if zoneObj and zoneObj:FindFirstChild("Enemies") then
-                            enemy = zoneObj.Enemies:FindFirstChild(boss.name)
-                        end
+                        enemy = zoneObj and zoneObj:FindFirstChild("Enemies") and zoneObj.Enemies:FindFirstChild(boss.name)
                     end
                     if enemy then
                         petCycle = petCycle % #pets + 1
-                        task.spawn(function()
-                            pcall(CombatRF.InvokeServer, CombatRF, "AttackEnemy", enemy, pets[petCycle])
-                        end)
+                        CombatRF:InvokeServer("AttackEnemy", enemy, pets[petCycle])
                         bossCooldown[boss.name] = now
                     end
                 end
             end
-        end)
-        task.wait(success and 0.1 or 0.5)
+        end
+        task.wait(0.1)
     end
 end
 
--- Farm de verão
 local function summerLoop()
-    while threadFlags.summer and config.farmSummer do
-        local success = pcall(function()
-            local zone = getZone("SummerEventZone")
-            local pets = getPets()
-            if zone and zone:FindFirstChild("Enemies") and #pets > 0 then
-                local idx = 1
-                for _, enemy in ipairs(zone.Enemies:GetChildren()) do
-                    if not threadFlags.summer then break end
-                    task.spawn(function()
-                        pcall(CombatRF.InvokeServer, CombatRF, "AttackEnemy", enemy, pets[idx])
-                    end)
-                    idx = idx + 1
-                    if idx > #pets then idx = 1 end
-                end
+    while activeLoops.summer and config.farmSummer do
+        local zone = getZone("SummerEventZone")
+        local pets = getPets()
+        if zone and zone:FindFirstChild("Enemies") and #pets > 0 then
+            local idx = 1
+            for _, enemy in ipairs(zone.Enemies:GetChildren()) do
+                if not activeLoops.summer then break end
+                CombatRF:InvokeServer("AttackEnemy", enemy, pets[idx])
+                idx = idx % #pets + 1
             end
-        end)
-        task.wait(success and config.summerDelay or 0.5)
+        end
+        task.wait(config.summerDelay)
     end
 end
 
--- Farm de comida
 local function foodLoop()
-    while threadFlags.food and config.farmFood do
-        local success = pcall(function()
-            local zone = getZone("Zone12.1")
-            local pets = getPets()
-            if zone and zone:FindFirstChild("FoodSpawns") and #pets > 0 then
-                local idx = 1
-                for _, food in ipairs(zone.FoodSpawns:GetChildren()) do
-                    if not threadFlags.food then break end
-                    task.spawn(function()
-                        pcall(CollectionRF.InvokeServer, CollectionRF, "CollectFood", food, pets[idx])
-                    end)
-                    idx = idx + 1
-                    if idx > #pets then idx = 1 end
-                end
+    while activeLoops.food and config.farmFood do
+        local zone = getZone("Zone12.1")
+        local pets = getPets()
+        if zone and zone:FindFirstChild("FoodSpawns") and #pets > 0 then
+            local idx = 1
+            for _, food in ipairs(zone.FoodSpawns:GetChildren()) do
+                if not activeLoops.food then break end
+                CollectionRF:InvokeServer("CollectFood", food, pets[idx])
+                idx = idx % #pets + 1
             end
-        end)
-        task.wait(success and config.foodDelay or 0.5)
+        end
+        task.wait(config.foodDelay)
     end
 end
 
--- Gerenciador de threads
-local function startLoop(loopName, loopFunction)
-    if threadFlags[loopName] then return end
-    threadFlags[loopName] = true
-    task.spawn(loopFunction)
+-- Gerenciador de loops
+local function startLoop(name, func)
+    if activeLoops[name] then return end
+    activeLoops[name] = true
+    task.spawn(func)
 end
 
-local function stopLoop(loopName)
-    threadFlags[loopName] = false
+local function stopLoop(name)
+    activeLoops[name] = false
 end
 
--- ========== INTERFACE RAYFIELD ==========
-
--- Criar janela
+-- ========== INTERFACE RAYFIELD OTIMIZADA ==========
 local Window = Rayfield:CreateWindow({
     Name = "Maverick Hub",
-    LoadingTitle = "Carregando...",
-    LoadingSubtitle = "by Maverick",
-    ConfigurationSaving = {
-        Enabled = true,
-        FolderName = "MaverickHub",
-        FileName = "Config"
-    },
-    Discord = {
-        Enabled = false,
-        Invite = "",
-        RememberJoins = true
-    },
+    LoadingTitle = "Otimizacao",
+    LoadingSubtitle = "FPS Boost + Farms",
+    ConfigurationSaving = { Enabled = true, FolderName = "MaverickHub", FileName = "Config" },
+    Discord = { Enabled = false },
     KeySystem = false,
-    KeySettings = {
-        Title = "Chave",
-        Subtitle = "Insira a chave",
-        Note = "Nao ha chave",
-        FileName = "Key",
-        SaveKey = false,
-        GrabKeyFromSite = false,
-        Key = {""}
-    }
 })
 
 -- Aba Principal
 local MainTab = Window:CreateTab("Principal", "home")
 local MainSection = MainTab:CreateSection("Controle")
 
--- Status
 local StatusLabel = MainTab:CreateParagraph({
     Title = "Status",
-    Content = "Parado | Anti-popup ativo | Console limpo"
+    Content = "Parado | FPS Boost ATIVO | Anti-popup"
 })
 
--- Botões Iniciar/Parar
 MainTab:CreateButton({
     Name = "Iniciar Todas Farms",
     Callback = function()
@@ -399,7 +384,7 @@ MainTab:CreateButton({
         config.farmSummer = true
         config.farmFood = true
 
-        if #eggsSelected == 0 then
+        if next(eggsSelected) == nil then
             Rayfield:Notify({Title = "Aviso", Content = "Nenhum ovo selecionado!", Duration = 3})
         end
 
@@ -410,8 +395,8 @@ MainTab:CreateButton({
         startLoop("summer", summerLoop)
         startLoop("food", foodLoop)
 
-        StatusLabel:Set({Title = "Status", Content = "Executando | Todas as farms ativas"})
-        Rayfield:Notify({Title = "Farm", Content = "Todas as farms iniciadas", Duration = 3})
+        StatusLabel:Set({Title = "Status", Content = "Executando | FPS Boost ATIVO"})
+        Rayfield:Notify({Title = "Farm", Content = "Todas farms iniciadas", Duration = 3})
     end
 })
 
@@ -425,53 +410,48 @@ MainTab:CreateButton({
         config.farmSummer = false
         config.farmFood = false
 
-        stopLoop("plant")
-        stopLoop("hash")
-        stopLoop("feed")
-        stopLoop("boss")
-        stopLoop("summer")
-        stopLoop("food")
+        for k, _ in pairs(activeLoops) do stopLoop(k) end
 
-        StatusLabel:Set({Title = "Status", Content = "Parado | Anti-popup ativo | Console limpo"})
-        Rayfield:Notify({Title = "Farm", Content = "Todas as farms paradas", Duration = 3})
+        StatusLabel:Set({Title = "Status", Content = "Parado | FPS Boost ATIVO | Anti-popup"})
+        Rayfield:Notify({Title = "Farm", Content = "Todas farms paradas", Duration = 3})
     end
 })
 
-MainSection = MainTab:CreateSection("Informacoes")
+MainSection = MainTab:CreateSection("Desempenho")
+MainTab:CreateToggle({
+    Name = "FPS Boost Extremo",
+    CurrentValue = true,
+    Callback = function(Value)
+        applyFPSBoost(Value)
+    end
+})
+
 MainTab:CreateParagraph({
-    Title = "Protecoes",
-    Content = "Popup de coins: BLOQUEADO\nConsole: Limpo a cada 2s\nCache de zonas: Limpo a cada 45s"
+    Title = "Otimizacoes",
+    Content = "• Sombras desativadas\n• Qualidade minima\n• Particulas removidas\n• Console limpo a cada 5s"
 })
 
 -- Aba Ovos
 local EggsTab = Window:CreateTab("Ovos", "package")
-local EggsSection = EggsTab:CreateSection("Selecao de Ovos")
-
--- Toggles para cada ovo
+EggsTab:CreateSection("Selecao de Ovos")
 for _, egg in ipairs(eggData) do
     EggsTab:CreateToggle({
         Name = egg.name,
         CurrentValue = false,
         Callback = function(Value)
-            if Value then
-                eggsSelected[egg.zone] = true
-            else
-                eggsSelected[egg.zone] = nil
-            end
+            if Value then eggsSelected[egg.zone] = true else eggsSelected[egg.zone] = nil end
         end
     })
 end
 
-EggsSection = EggsTab:CreateSection("Configuracoes de Plantio")
+EggsTab:CreateSection("Config. Plantio")
 EggsTab:CreateSlider({
     Name = "Quantidade por burst",
     Range = {1, 20},
     Increment = 1,
     Suffix = "x",
     CurrentValue = config.plantBurstCount,
-    Callback = function(Value)
-        config.plantBurstCount = Value
-    end
+    Callback = function(v) config.plantBurstCount = v end
 })
 EggsTab:CreateSlider({
     Name = "Delay entre bursts (s)",
@@ -479,66 +459,48 @@ EggsTab:CreateSlider({
     Increment = 0.01,
     Suffix = "s",
     CurrentValue = config.plantBurstDelay,
-    Callback = function(Value)
-        config.plantBurstDelay = Value
-    end
+    Callback = function(v) config.plantBurstDelay = v end
 })
 
 -- Aba Chefes
 local BossesTab = Window:CreateTab("Chefes", "shield")
-local BossesSection = BossesTab:CreateSection("Selecao de Chefes")
-
--- Toggle mestre para farm de chefes
 BossesTab:CreateToggle({
     Name = "Farmar Chefes",
     CurrentValue = false,
     Callback = function(Value)
         config.farmBosses = Value
-        if Value then
-            startLoop("boss", bossLoop)
-        else
-            stopLoop("boss")
-        end
+        if Value then startLoop("boss", bossLoop) else stopLoop("boss") end
     end
 })
 
-BossesSection = BossesTab:CreateSection("Chefes Disponiveis")
+BossesTab:CreateSection("Chefes Disponiveis")
 for _, boss in ipairs(bossList) do
     BossesTab:CreateToggle({
         Name = boss.name,
         CurrentValue = false,
-        Callback = function(Value)
-            bossEnabled[boss.name] = Value
-        end
+        Callback = function(v) bossEnabled[boss.name] = v end
     })
 end
 
-BossesSection = BossesTab:CreateSection("Configuracoes")
+BossesTab:CreateSection("Configuracoes")
 BossesTab:CreateSlider({
     Name = "Delay entre ataques (s)",
     Range = {0.1, 1},
     Increment = 0.1,
     Suffix = "s",
     CurrentValue = config.bossDelay,
-    Callback = function(Value)
-        config.bossDelay = Value
-    end
+    Callback = function(v) config.bossDelay = v end
 })
 
 -- Aba Farms
 local FarmsTab = Window:CreateTab("Farms", "zap")
-local FarmsSection = FarmsTab:CreateSection("Auto Hash")
-
+FarmsTab:CreateSection("Auto Hash")
 FarmsTab:CreateToggle({
     Name = "Chocar Ovos (Hash)",
     CurrentValue = false,
     Callback = function(Value)
         config.autoHash = Value
-        if Value then
-            startLoop("hash", hashLoop)
-        else
-            stopLoop("hash")
-        end
+        if Value then startLoop("hash", hashLoop) else stopLoop("hash") end
     end
 })
 FarmsTab:CreateSlider({
@@ -547,9 +509,7 @@ FarmsTab:CreateSlider({
     Increment = 1,
     Suffix = "x",
     CurrentValue = config.hashCount,
-    Callback = function(Value)
-        config.hashCount = Value
-    end
+    Callback = function(v) config.hashCount = v end
 })
 FarmsTab:CreateSlider({
     Name = "Delay entre acoes (s)",
@@ -557,22 +517,16 @@ FarmsTab:CreateSlider({
     Increment = 0.0001,
     Suffix = "s",
     CurrentValue = config.hashDelay,
-    Callback = function(Value)
-        config.hashDelay = Value
-    end
+    Callback = function(v) config.hashDelay = v end
 })
 
-FarmsSection = FarmsTab:CreateSection("Auto Alimentar Ninhos")
+FarmsTab:CreateSection("Auto Alimentar Ninhos")
 FarmsTab:CreateToggle({
     Name = "Alimentar Ninhos",
     CurrentValue = false,
     Callback = function(Value)
         config.autoFeedNests = Value
-        if Value then
-            startLoop("feed", feedLoop)
-        else
-            stopLoop("feed")
-        end
+        if Value then startLoop("feed", feedLoop) else stopLoop("feed") end
     end
 })
 FarmsTab:CreateSlider({
@@ -581,22 +535,16 @@ FarmsTab:CreateSlider({
     Increment = 0.1,
     Suffix = "s",
     CurrentValue = config.feedDelay,
-    Callback = function(Value)
-        config.feedDelay = Value
-    end
+    Callback = function(v) config.feedDelay = v end
 })
 
-FarmsSection = FarmsTab:CreateSection("Farm de Verao")
+FarmsTab:CreateSection("Farm de Verao")
 FarmsTab:CreateToggle({
     Name = "Farmar Evento Verao",
     CurrentValue = false,
     Callback = function(Value)
         config.farmSummer = Value
-        if Value then
-            startLoop("summer", summerLoop)
-        else
-            stopLoop("summer")
-        end
+        if Value then startLoop("summer", summerLoop) else stopLoop("summer") end
     end
 })
 FarmsTab:CreateSlider({
@@ -605,22 +553,16 @@ FarmsTab:CreateSlider({
     Increment = 0.001,
     Suffix = "s",
     CurrentValue = config.summerDelay,
-    Callback = function(Value)
-        config.summerDelay = Value
-    end
+    Callback = function(v) config.summerDelay = v end
 })
 
-FarmsSection = FarmsTab:CreateSection("Farm de Comida")
+FarmsTab:CreateSection("Farm de Comida")
 FarmsTab:CreateToggle({
     Name = "Coletar Comida",
     CurrentValue = false,
     Callback = function(Value)
         config.farmFood = Value
-        if Value then
-            startLoop("food", foodLoop)
-        else
-            stopLoop("food")
-        end
+        if Value then startLoop("food", foodLoop) else stopLoop("food") end
     end
 })
 FarmsTab:CreateSlider({
@@ -629,14 +571,12 @@ FarmsTab:CreateSlider({
     Increment = 0.1,
     Suffix = "s",
     CurrentValue = config.foodDelay,
-    Callback = function(Value)
-        config.foodDelay = Value
-    end
+    Callback = function(v) config.foodDelay = v end
 })
 
--- Inicializar notificação de carregamento
+-- Notificação final
 Rayfield:Notify({
-    Title = "Carregado",
-    Content = "Maverick Hub carregado com sucesso!",
+    Title = "Maverick Hub",
+    Content = "Carregado! FPS Boost ja ativo.",
     Duration = 3
 })
