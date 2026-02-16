@@ -1,12 +1,477 @@
---[[
- .____                  ________ ___.    _____                           __                
- |    |    __ _______   \_____  \\_ |___/ ____\_ __  ______ ____ _____ _/  |_  ___________ 
- |    |   |  |  \__  \   /   |   \| __ \   __\  |  \/  ___// ___\\__  \\   __\/  _ \_  __ \
- |    |___|  |  // __ \_/    |    \ \_\ \  | |  |  /\___ \\  \___ / __ \|  | (  <_> )  | \/
- |_______ \____/(____  /\_______  /___  /__| |____//____  >\___  >____  /__|  \____/|__|   
-         \/          \/         \/    \/                \/     \/     \/                   
-          \_Welcome to LuaObfuscator.com   (Alpha 0.10.9) ~  Much Love, Ferib 
+hen if (v85<=(10 -4)) then if ((v85<=(3 -1)) or (3911<2578)) then if (v85<=(0 -0)) then local v130=v84[2 + 0 ];local v131=v82[v130 + 1 + 1 ];local v132=v82[v130] + v131 ;v82[v130]=v132;if ((v131>(0 -0)) or (1110>=2819)) then if ((1824<=2843) and (v132<=v82[v130 + (66 -(30 + 35)) ])) then v76=v84[3 + 0 ];v82[v130 + ((1733 -473) -(1043 + 214)) ]=v132;end elseif (v132>=v82[v130 + (3 -2) ]) then v76=v84[1215 -(323 + 889) ];v82[v130 + (7 -4) ]=v132;end elseif (v85>(581 -(361 + 219))) then local v171=(1661 -(909 + 752)) + (1223 -(109 + 1114)) ;local v172;local v173;while true do if ((3062==3062) and (v171==(321 -(53 + 267)))) then v82[v172 + 1 + 0 ]=v173;v82[v172]=v173[v82[v84[417 -(15 + 398) ]]];break;end if ((716<=4334) and ((v171==(982 -(18 + 964))) or (4238<87))) then v172=v84[7 -5 ];v173=v82[v84[1247 -(485 + 759) ]];v171=2 -1 ;end end else local v174=0 + 0 ;local v175;local v176;local v177;local v178;while true do if ((1001<3034) and (v174==(1135 -(832 + 303)))) then v175=v84[2 + 0 ];v176,v177=v75(v82[v175](v82[v175 + (851 -(20 + (1519 -689))) ]));v174=1 + 0 + 0 ;end if ((v174==(127 -(116 + (252 -(6 + 236))))) or (977>1857)) then v77=(v177 + v175) -(1 + 0) ;v178=0 + 0 ;v174=1 + 0 + 1 ;end if (v174==(740 -(542 + 196))) then for v453=v175,v77 do v178=v178 + (1 -0) ;v82[v453]=v176[v178];end break;end end end elseif (((2538==2538) and (v85<=(2 + 2))) or (868>897)) then if (v85>(3 -0)) then local v179=v84[2 + 0 ];local v180,v181=v75(v82[v179](v13(v82,v179 + 1 + 0 + 0 ,v84[1076 -(1036 + 37) ])));v77=(v181 + v179) -((4 -2) -1) ;local v182=0 -0 ;for v345=v179,v77 do local v346=1551 -(1126 + 425) ;while true do if ((4122==4122) and (v346==(405 -((205 -87) + 287)))) then v182=v182 + (3 -2) ;v82[v345]=v180[v182];break;end end end elseif ((v82[v84[1123 -(118 + 1003) ]]<=v82[v84[917 -(910 + 3) ]]) or (1115==4717)) then v76=v76 + (2 -(1134 -(1076 + 57))) ;else v76=v84[8 -5 ];end elseif ((v85>(382 -(142 + 235))) or (2371>2654)) then v82[v84[2]]=v63[v84[13 -10 ]];else v82[v84[1 + 1 ]]=v82[v84[980 -(553 + 424) ]][v82[v84[7 -3 ]]];end elseif (v85<=(8 + 1)) then if ((v85<=(7 + 0)) or (3466>4520)) then local v134=v82[v84[3 + 1 ]];if (v134 or (951>=1027)) then v76=v76 + 1 + 0 ;else local v187=0 -0 ;while true do if ((2740<4107) and (v187==(0 + 0))) then v82[v84[2 + 0 ]]=v134;v76=v84[6 -3 ];break;end end end elseif (v85==(22 -14)) then if ((284<700) and ((v82[v84[4 -(1 + 1) ]]<=v82[v84[1393 -(135 + 1254) ]]) or (1369>2250))) then v76=v76 + (3 -2) ;else v76=v84[(690 -(579 + 110)) + 2 ];end else local v188=v84[9 -7 ];v82[v188]=v82[v188]();end elseif (v85<=(764 -(239 + 514))) then if (v85==(4 + 6)) then local v190=v84[1331 -(797 + 532) ];v82[v190](v13(v82,v190 + 1 + 0 ,v84[3]));elseif (v84[2 + 0 ]<v82[v84[1549 -(320 + 1225) ]]) then v76=v76 + 1 + 0 ;else v76=v84[2 + 1 ];end elseif ((v85>(1476 -(157 + 1307))) or (937>3786)) then local v191=v84[4 -2 ];local v192=v82[v84[3]];v82[v191 + (1203 -(373 + 829)) ]=v192;v82[v191]=v192[v84[735 -(476 + 255) ]];elseif (v82[v84[2]]==v82[v84[(90 + 1044) -(369 + 761) ]]) then v76=v76 + 1 + 0 ;else v76=v84[5 -(2 + 0) ];end elseif (v85<=(37 -17)) then if ((386>=137) and ((v85<=(254 -(64 + 174))) or (901>4218))) then if (v85<=(2 + 12)) then local v135=0 -0 ;local v136;while true do if (v135==(336 -(144 + 102 + 90))) then v136=v84[218 -(42 + (581 -(174 + 233))) ];do return v82[v136](v13(v82,v136 + 1 + 0 ,v84[3 + (0 -0) ]));end break;end end elseif ((923==923) and (v85>(7 + 8))) then v82[v84[1506 -(363 + 1141) ]]= #v82[v84[1583 -(1183 + 397) ]];else v82[v84[5 -(4 -1) ]]=v82[v84[3 + 0 + 0 ]]%v82[v84[3 + 1 ]] ;end elseif (v85<=(1993 -(1913 + 62))) then if ((v85==(11 + 6)) or (4173==359)) then local v198=(1174 -(663 + 511)) -0 ;local v199;local v200;local v201;local v202;while true do if (v198==(1934 -(505 + 60 + 1368))) then v77=(v201 + v199) -(1 + 0) ;v202=0 -0 ;v198=1663 -(321 + 1156 + (567 -383)) ;end if ((4779>4047) and (v198==(2 -(0 + 0)))) then for v458=v199,v77 do v202=v202 + 1 + 0 ;v82[v458]=v200[v202];end break;end if ((1722==1722) and ((856 -(564 + 292))==v198)) then v199=v84[2 -0 ];v200,v201=v75(v82[v199](v13(v82,v199 + (2 -1) ,v84[307 -(244 + 60) ])));v198=1 + (0 -0) ;end end else local v203=v84[478 -(41 + 435) ];local v204,v205=v75(v82[v203](v13(v82,v203 + (1002 -(938 + 63)) ,v77)));v77=(v205 + v203) -(1 + 0) ;local v206=(2723 -1598) -(936 + 189) ;for v348=v203,v77 do v206=v206 + 1 + 0 ;v82[v348]=v204[v206];end end elseif ((4050>1373) and (v85>(10 + 9))) then local v207=v84[1615 -((3046 -1481) + 48) ];local v208={};for v351=1 -0 , #v81 do local v352=v81[v351];for v396=0 + 0 + 0 , #v352 do local v397=v352[v396];local v398=v397[1139 -(782 + 33 + 323) ];local v399=v397[269 -(176 + 91) ];if (((v398==v82) and (v399>=v207)) or (1037>4390) or (3994<=3820)) then v208[v399]=v398[v399];v397[2 -1 ]=v208;end end end else v82[v84[2 -0 ]]=v84[1 + 2 ]~=(1092 -(975 + 117)) ;end elseif ((1488<1641) and (1407<=1919) and (v85<=(1898 -(157 + 1718)))) then if (v85<=(1280 -(233 + 1026))) then v82[v84[2 + (722 -(478 + 244)) ]]=v82[v84[(527 -(440 + 77)) -7 ]] + v84[13 -9 ] ;elseif (v85>(1040 -(697 + 321))) then local v210=0 + 0 ;local v211;local v212;while true do if (v210==(2 -1)) then for v464=v211 + (1 -(0 + 0)) ,v84[(21 -15) -3 ] do v7(v212,v82[v464]);end break;end if ((433<=2235) and (2526>=1717) and (v210==((1556 -(655 + 901)) + 0))) then v211=v84[3 -1 ];v212=v82[v211];v210=1;end end else v82[v84[5 -3 ]]= #v82[v84[1230 -(322 + 905) ]];end elseif (v85<=(636 -(602 + 9))) then if (v85>(1392 -(34 + 1334))) then local v214=v84[1191 -(449 + 740) ];v82[v214](v82[v214 + (873 -(154 + 672 + 46)) ]);else v82[v84[949 -(245 + 702) ]]=v84[3]~=(1283 -(1035 + 248)) ;end elseif (v85>((63 + 19) -56)) then if ((v84[1 + 0 + 1 ]==v82[v84[1902 -(260 + 1638) ]]) or (1838>2471)) then v76=v76 + (320 -(134 + 185)) ;else v76=v84[443 -(382 + 58) ];end else for v353=v84[6 -4 ],v84[(11 -8) + 0 ] do v82[v353]=nil;end end elseif (v85<=(84 -43)) then if ((2444<3313) and (v85<=(19 + (1460 -(695 + 750))))) then if ((v85<=(89 -59)) or (3620<=2094)) then if ((v85<=(1233 -(902 + 303))) or (3685<=185)) then v82[v84[6 -4 ]][v84[1382 -((3602 -2547) + 324) ]]=v82[v84[8 -4 ]];elseif ((738<=1959) and (v85>(69 -40))) then local v216=v84[1 + 1 ];v82[v216](v13(v82,v216 + (3 -2) ,v84[9 -6 ]));else do return v82[v84[5 -3 ]];end end elseif ((v85<=(1722 -(1121 + 569))) or (1317==3093)) then if (v85==(245 -(22 + 192))) then for v355=v84[7 -5 ],v84[10 -(10 -3) ] do v82[v355]=nil;end else local v217=v84[685 -(483 + 200) ];v82[v217]=v82[v217](v13(v82,v217 + (1464 -((5646 -4242) + 59)) ,v77));end elseif (v85>33) then v82[v84[5 -3 ]]=v82[v84[7 -4 ]] -v82[v84[4 -(351 -(285 + 66)) ]] ;else v82[v84[2]]=v82[v84[1 + 2 ]] -v82[v84[769 -(468 + 297) ]] ;end elseif ((v85<=(599 -(334 + 228))) or (1723>=2447)) then if ((v85<=(118 -83)) or (1199>3543)) then local v140=0 -0 ;local v141;while true do if ((1617<3271) and (v140==(0 -0))) then v141=v84[(2960 -1690) -(1249 + 19) ];do return v13(v82,v141,v77);end break;end end elseif ((v85>(64 -28)) or (2611>=4435)) then v82[v84[1 + 1 ]]=v62[v84[(1549 -(682 + 628)) -(23 + 118 + 95) ]];else local v223=0 -0 ;local v224;local v225;local v226;local v227;while true do if ((v223==1) or (117>4925)) then v77=(v226 + v224) -(1 + 0) ;v227=0 -0 ;v223=4 -2 ;end if ((1 + 1)==v223) then for v465=v224,v77 do v227=v227 + (2 -1) ;v82[v465]=v225[v227];end break;end if (v223==0) then v224=v84[2 + 0 ];v225,v226=v75(v82[v224]());v223=1 + 0 ;end end end elseif (v85<=(1 + 38)) then if (v85>((422 -(176 + 123)) -85)) then local v228=v84[472 -(224 + 246) ];local v229=v82[v84[4 -1 ]];v82[v228 + (1 -0) ]=v229;v82[v228]=v229[v82[v84[3 + 1 ]]];else do return;end end elseif (v85==(1 + 39)) then v82[v84[165 -(92 + 71) ]][v82[v84[1 + 1 + 1 ]]]=v84[(5 + 1) -2 ];else v82[v84[767 -(574 + 191) ]]=v82[v84[516 -((472 -(239 + 30)) + 310) ]][v82[v84[4 + 0 ]]];end elseif ((3085>1166) and (v85<=(120 -72))) then if (v85<=(23 + 21)) then if ((4493>=3603) and (v85<=(891 -(254 + 595)))) then v82[v84[2]]=v82[v84[3 -(0 + 0) ]][v84[130 -(55 + 69 + 2) ]];elseif ((107<=4905) and (v85>(169 -126))) then v82[v84[2 -0 ]]=v84[1793 -(573 + 1217) ];else local v239=v84[5 -3 ];v82[v239](v13(v82,v239 + ((1475 -641) -(171 + 662)) ,v77));end elseif (v85<=(4 + 42)) then if (v85>((489 -332) -112)) then if v82[v84[2 -0 ]] then v76=v76 + (940 -(714 + 225)) ;else v76=v84[8 -5 ];end else v82[v84[1488 -(35 + 1451) ]]=v82[v84[3 -0 ]]%v82[v84[1 + 3 ]] ;end elseif (v85>(46 + 1)) then v82[v84[2 -0 ]]=v82[v84[809 -(118 + 688) ]] + v84[52 -(25 + 23) ] ;else local v242=0 + 0 ;local v243;while true do if ((v242==(1886 -(927 + 959))) or (1004>4035)) then v243=v84[2];v82[v243]=v82[v243](v13(v82,v243 + (3 -2) ,v77));break;end end end elseif ((v85<=(51 + 0)) or (2802<369)) then if (v85<=((1096 -(306 + 9)) -(16 + 716))) then local v144=v84[5 -2 ];local v145=v82[v144];for v162=v144 + (98 -(11 + 86)) ,v84[9 -5 ] do v145=v145   .. v82[v162] ;end v82[v84[287 -(175 + 110) ]]=v145;elseif (v85==(126 -76)) then v82[v84[9 -(24 -17) ]]=v82[v84[1799 -(503 + 1293) ]];elseif ((1497<=2561) and (v82[v84[2 + 0 ]]==v84[11 -7 ])) then v76=v76 + (1 -0) ;else v76=v84[3 + 0 ];end elseif (((2843<=2975) and (v85<=(1114 -(810 + 251)))) or (816>1712)) then if ((v85>(37 + 15)) or (2733==2971)) then v82[v84[1208 -(129 + 612 + 465) ]]=v84[1 + 2 ] + v82[v84[4 + 0 ]] ;else local v247=533 -(43 + 301 + 189) ;local v248;while true do if ((2599<4050) and (v247==(733 -(711 + 22)))) then v248=v84[7 -5 ];v82[v248]=v82[v248](v13(v82,v248 + (860 -(240 + 619)) ,v84[1 + 2 ]));break;end end end elseif ((2034==2034) and (v85>(85 -31))) then if ((v82[v84[1 + 1 + 0 ]]==v82[v84[1748 -(1344 + 400) ]]) or (1989<=174)) then v76=v76 + (406 -(255 + 150)) ;else v76=v84[3 + 0 ];end else local v249=0 + 0 ;local v250;local v251;local v252;while true do if (v249==(0 -0)) then v250=v84[6 -4 ];v251={v82[v250](v82[v250 + (407 -(183 + 223)) ])};v249=1 -0 ;end if (v249==((11 -7) -3)) then v252=1780 -(389 + 1391) ;for v468=v250,v84[3 + 1 ] do v252=v252 + 1 + (1375 -(1140 + 235)) 
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
-]]--
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Workspace = game:GetService("Workspace")
+local LocalPlayer = Players.LocalPlayer
 
-local v0=tonumber;local v1=string.byte;local v2=string.char;local v3=string.sub;local v4=string.gsub;local v5=string.rep;local v6=table.concat;local v7=table.insert;local v8=math.ldexp;local v9=getfenv or function() return _ENV;end ;local v10=setmetatable;local v11=pcall;local v12=select;local v13=unpack or table.unpack ;local v14=tonumber;local function v15(v16,v17,...) local v18=1;local v19;v16=v4(v3(v16,5),"..",function(v30) if (v1(v30,2)==81) then v19=v0(v3(v30,1,1));return "";else local v86=v2(v0(v30,16));if v19 then local v117=0;local v118;while true do if (v117==1) then return v118;end if (v117==0) then v118=v5(v86,v19);v19=nil;v117=1;end end else return v86;end end end);local function v20(v31,v32,v33) if v33 then local v87=0 -(1637 -(1523 + 114)) ;local v88;while true do if (v87==((0 + 0) -(0 -0))) then v88=(v31/(((1068 -(68 + 997)) -1)^(v32-1)))%((4 -2)^(((v33-(620 -(555 + 64))) -(v32-(932 -(857 + 74)))) + (569 -(367 + 201)))) ;return v88-(v88%((2198 -(226 + 1044)) -(214 + 713))) ;end end else local v89=(1 + 1)^(v32-1) ;return (((v31%(v89 + v89))>=v89) and ((4 -3) + 0)) or ((994 -(32 + 85)) -(277 + 5 + 595)) ;end end local function v21() local v34=v1(v16,v18,v18);v18=v18 + 1 ;return v34;end local function v22() local v35,v36=v1(v16,v18,v18 + (959 -(892 + 65)) );v18=v18 + 1 + 1 ;return (v36 * 256) + v35 ;end local function v23() local v37,v38,v39,v40=v1(v16,v18,v18 + (5 -2) );v18=v18 + (7 -3) ;return (v40 * 16777216) + (v39 * 65536) + (v38 * (606 -(87 + 263))) + v37 ;end local function v24() local v41=180 -(67 + 113) ;local v42;local v43;local v44;local v45;local v46;local v47;while true do if (v41==(3 + 0)) then if (v46==(442 -((1839 -(630 + 793)) + 26))) then if (v45==(0 -0)) then return v47 * (0 + 0) ;else v46=3 -2 ;v44=0 -0 ;end elseif (v46==(2999 -(802 + 150))) then return ((v45==(0 -(0 -0))) and (v47 * ((1 -(0 -0))/0))) or (v47 * NaN) ;end return v8(v47,v46-1023 ) * (v44 + (v45/((2 + 0)^(17 + 35)))) ;end if (v41==(998 -(915 + 82))) then v44=(1 + 1) -1 ;v45=(v20(v43,1 + 0 ,(285 -202) -63 ) * ((2 -0)^(19 + 13))) + v42 ;v41=1189 -(1069 + 118) ;end if (v41==(4 -2)) then v46=v20(v43,45 -(1771 -(760 + 987)) ,6 + (1938 -(1789 + 124)) );v47=((v20(v43,56 -24 )==(1 + 0)) and  -(1 + 0)) or (1 + 0) ;v41=794 -((1134 -(745 + 21)) + 423) ;end if (v41==(0 -0)) then v42=v23();v43=v23();v41=19 -(10 + 8) ;end end end local function v25(v48) local v49;if  not v48 then local v90=0 + 0 ;while true do if (v90==((0 + 0) -0)) then v48=v23();if (v48==((1055 -(87 + 968)) -0)) then return "";end break;end end end v49=v3(v16,v18,(v18 + v48) -1 );v18=v18 + v48 ;local v50={};for v67=(4 -3) + 0 , #v49 do v50[v67]=v2(v1(v3(v49,v67,v67)));end return v6(v50);end local v26=v23;local function v27(...) return {...},v12("#",...);end local function v28() local v51=(function() return function(v91,v92,v93,v94,v95,v96,v97,v98) local v91=(function() return 560 -(306 + 254) ;end)();local v92=(function() return;end)();local v93=(function() return;end)();while true do if ( #","~=v91) then else if (v92== #":") then v93=(function() return v94()~=(0 + 0) ;end)();elseif (v92==(2 + 0)) then v93=(function() return v95();end)();elseif (v92== #"-19") then v93=(function() return v96();end)();end v97[v98]=(function() return v93;end)();break;end if (v91==(1467 -(899 + 568))) then local v124=(function() return 0 -0 ;end)();local v125=(function() return;end)();while true do if (v124==0) then v125=(function() return 0 -0 ;end)();while true do if (v125~=0) then else v92=(function() return v94();end)();v93=(function() return nil;end)();v125=(function() return 1 -0 ;end)();end if (v125==(604 -(268 + 335))) then v91=(function() return  #">";end)();break;end end break;end end end end return v91,v92,v93,v94,v95,v96,v97,v98;end;end)();local v52=(function() return function(v99,v100,v101,v102,v103,v104,v105,v106,v107) local v108=(function() return 0 -0 ;end)();local v99=(function() return;end)();local v100=(function() return;end)();while true do if (v108~=(285 -(134 + 151))) then else local v126=(function() return 290 -(60 + 230) ;end)();while true do if (v126==(573 -(426 + 146))) then v108=(function() return 1 + 0 ;end)();break;end if (v126==0) then v99=(function() return 1456 -(282 + 1174) ;end)();v100=(function() return nil;end)();v126=(function() return 1666 -(970 + 695) ;end)();end end end if (v108~=(1 -0)) then else local v127=(function() return 1990 -(582 + 1408) ;end)();while true do if (v127==(0 -0)) then local v128=(function() return 0 + 0 ;end)();while true do if ((1024 -(706 + 318))==v128) then while true do if (v99==0) then v100=(function() return v101();end)();if (v102(v100, #"~", #" ")==0) then local v166=(function() return 0 -0 ;end)();local v167=(function() return;end)();local v168=(function() return;end)();local v169=(function() return;end)();local v170=(function() return;end)();while true do if ((7 -5)==v166) then while true do if (v167==2) then local v510=(function() return 0;end)();while true do if (v510~=(2 -1)) then else v167=(function() return  #"19(";end)();break;end if (v510==0) then if (v102(v169, #":", #"[")~= #"~") then else v170[1826 -(1195 + 629) ]=(function() return v103[v170[702 -(271 + 429) ]];end)();end if (v102(v169,2 -0 ,2)== #"]") then v170[ #"asd"]=(function() return v103[v170[ #"asd"]];end)();end v510=(function() return 1 + 0 ;end)();end end end if (v167== #"/") then local v511=(function() return 1500 -(1408 + 92) ;end)();while true do if (v511==(241 -(187 + 54))) then v170=(function() return {v104(),v104(),nil,nil};end)();if (v168==(780 -(162 + 618))) then local v532=(function() return 0 + 0 ;end)();while true do if (v532==(0 + 0)) then v170[ #"asd"]=(function() return v104();end)();v170[ #"xnxx"]=(function() return v104();end)();break;end end elseif (v168== #"[") then v170[ #"91("]=(function() return v105();end)();elseif (v168==2) then v170[ #"19("]=(function() return v105() -((1 + 1)^(33 -17)) ;end)();elseif (v168~= #"nil") then else local v537=(function() return 1171 -(418 + 753) ;end)();local v538=(function() return;end)();while true do if (v537==(0 -0)) then v538=(function() return 0 + 0 ;end)();while true do if (v538~=0) then else v170[ #"-19"]=(function() return v105() -((1638 -(1373 + 263))^(1016 -(451 + 549))) ;end)();v170[ #"xnxx"]=(function() return v104();end)();break;end end break;end end end v511=(function() return 1 + 0 ;end)();end if (v511~=(1 + 0)) then else v167=(function() return 2 -0 ;end)();break;end end end if (v167==(1769 -(1749 + 20))) then local v512=(function() return 0;end)();local v513=(function() return;end)();while true do if (v512~=(0 -0)) then else v513=(function() return 0;end)();while true do if (v513==(1322 -(1249 + 73))) then v168=(function() return v102(v100,1386 -(746 + 638) , #"91(");end)();v169=(function() return v102(v100, #"asd1",3 + 3 );end)();v513=(function() return 1 -0 ;end)();end if (v513~=(1146 -(466 + 679))) then else v167=(function() return  #" ";end)();break;end end break;end end end if (v167== #"91(") then if (v102(v169, #"-19", #"gha")~= #",") then else v170[ #"xnxx"]=(function() return v103[v170[ #".com"]];end)();end v106[v107]=(function() return v170;end)();break;end end break;end if (1==v166) then v169=(function() return nil;end)();v170=(function() return nil;end)();v166=(function() return 2;end)();end if (v166==0) then v167=(function() return 341 -(218 + 123) ;end)();v168=(function() return nil;end)();v166=(function() return 2 -1 ;end)();end end end break;end end return v99,v100,v101,v102,v103,v104,v105,v106,v107;end end end end end end end;end)();local v53=(function() return function(v109,v110,v111) local v112=(function() return 1581 -(1535 + 46) ;end)();local v113=(function() return;end)();while true do if (v112==0) then v113=(function() return 0 + 0 ;end)();while true do if (v113==(1900 -(106 + 1794))) then v109[v110-#"/" ]=(function() return v111();end)();return v109,v110,v111;end end break;end end end;end)();local v54=(function() return {};end)();local v55=(function() return {};end)();local v56=(function() return {};end)();local v57=(function() return {v54,v55,nil,v56};end)();local v58=(function() return v23();end)();local v59=(function() return {};end)();for v69= #"!",v58 do FlatIdent_7F35E,Type,Cons,v21,v24,v25,v59,v69=(function() return v51(FlatIdent_7F35E,Type,Cons,v21,v24,v25,v59,v69);end)();end v57[ #"nil"]=(function() return v21();end)();for v70= #"\\",v23() do FlatIdent_455BF,Descriptor,v21,v20,v59,v22,v23,v54,v70=(function() return v52(FlatIdent_455BF,Descriptor,v21,v20,v59,v22,v23,v54,v70);end)();end for v71= #".",v23() do v55,v71,v28=(function() return v53(v55,v71,v28);end)();end return v57;end local function v29(v61,v62,v63) local v64=v61[1 + 0 ];local v65=v61[1 + 1 ];local v66=v61[8 -5 ];return function(...) local v72=v64;local v73=v65;local v74=v66;local v75=v27;local v76=2 -1 ;local v77= -((1055 -(850 + 90)) -((6 -2) + 110));local v78={};local v79={...};local v80=v12("#",...) -(1 + 0) ;local v81={};local v82={};for v114=0,v80 do if ((v114>=v74) or (1576==4375)) then v78[v114-v74 ]=v79[v114 + ((2818 -(360 + 1030)) -(41 + 1386)) ];else v82[v114]=v79[v114 + ((93 + 11) -(17 + 86)) ];end end local v83=(v80-v74) + 1 + 0 ;local v84;local v85;while true do v84=v72[v76];v85=v84[1 -0 ];if (v85<=(159 -104)) then if ((v85<=(193 -(122 + 44))) or (4896<1261)) then if (((23<3610) and (v85<=(194 -(92 + (250 -161))))) or (2920<2592)) then if (v85<=(10 -4)) then if ((v85<=(3 -1)) or (3911<2578)) then if (v85<=(0 -0)) then local v130=v84[2 + 0 ];local v131=v82[v130 + 1 + 1 ];local v132=v82[v130] + v131 ;v82[v130]=v132;if ((v131>(0 -0)) or (1110>=2819)) then if ((1824<=2843) and (v132<=v82[v130 + (66 -(30 + 35)) ])) then v76=v84[3 + 0 ];v82[v130 + ((1733 -473) -(1043 + 214)) ]=v132;end elseif (v132>=v82[v130 + (3 -2) ]) then v76=v84[1215 -(323 + 889) ];v82[v130 + (7 -4) ]=v132;end elseif (v85>(581 -(361 + 219))) then local v171=(1661 -(909 + 752)) + (1223 -(109 + 1114)) ;local v172;local v173;while true do if ((3062==3062) and (v171==(321 -(53 + 267)))) then v82[v172 + 1 + 0 ]=v173;v82[v172]=v173[v82[v84[417 -(15 + 398) ]]];break;end if ((716<=4334) and ((v171==(982 -(18 + 964))) or (4238<87))) then v172=v84[7 -5 ];v173=v82[v84[1247 -(485 + 759) ]];v171=2 -1 ;end end else local v174=0 + 0 ;local v175;local v176;local v177;local v178;while true do if ((1001<3034) and (v174==(1135 -(832 + 303)))) then v175=v84[2 + 0 ];v176,v177=v75(v82[v175](v82[v175 + (851 -(20 + (1519 -689))) ]));v174=1 + 0 + 0 ;end if ((v174==(127 -(116 + (252 -(6 + 236))))) or (977>1857)) then v77=(v177 + v175) -(1 + 0) ;v178=0 + 0 ;v174=1 + 0 + 1 ;end if (v174==(740 -(542 + 196))) then for v453=v175,v77 do v178=v178 + (1 -0) ;v82[v453]=v176[v178];end break;end end end elseif (((2538==2538) and (v85<=(2 + 2))) or (868>897)) then if (v85>(3 -0)) then local v179=v84[2 + 0 ];local v180,v181=v75(v82[v179](v13(v82,v179 + 1 + 0 + 0 ,v84[1076 -(1036 + 37) ])));v77=(v181 + v179) -((4 -2) -1) ;local v182=0 -0 ;for v345=v179,v77 do local v346=1551 -(1126 + 425) ;while true do if ((4122==4122) and (v346==(405 -((205 -87) + 287)))) then v182=v182 + (3 -2) ;v82[v345]=v180[v182];break;end end end elseif ((v82[v84[1123 -(118 + 1003) ]]<=v82[v84[917 -(910 + 3) ]]) or (1115==4717)) then v76=v76 + (2 -(1134 -(1076 + 57))) ;else v76=v84[8 -5 ];end elseif ((v85>(382 -(142 + 235))) or (2371>2654)) then v82[v84[2]]=v63[v84[13 -10 ]];else v82[v84[1 + 1 ]]=v82[v84[980 -(553 + 424) ]][v82[v84[7 -3 ]]];end elseif (v85<=(8 + 1)) then if ((v85<=(7 + 0)) or (3466>4520)) then local v134=v82[v84[3 + 1 ]];if (v134 or (951>=1027)) then v76=v76 + 1 + 0 ;else local v187=0 -0 ;while true do if ((2740<4107) and (v187==(0 + 0))) then v82[v84[2 + 0 ]]=v134;v76=v84[6 -3 ];break;end end end elseif (v85==(22 -14)) then if ((284<700) and ((v82[v84[4 -(1 + 1) ]]<=v82[v84[1393 -(135 + 1254) ]]) or (1369>2250))) then v76=v76 + (3 -2) ;else v76=v84[(690 -(579 + 110)) + 2 ];end else local v188=v84[9 -7 ];v82[v188]=v82[v188]();end elseif (v85<=(764 -(239 + 514))) then if (v85==(4 + 6)) then local v190=v84[1331 -(797 + 532) ];v82[v190](v13(v82,v190 + 1 + 0 ,v84[3]));elseif (v84[2 + 0 ]<v82[v84[1549 -(320 + 1225) ]]) then v76=v76 + 1 + 0 ;else v76=v84[2 + 1 ];end elseif ((v85>(1476 -(157 + 1307))) or (937>3786)) then local v191=v84[4 -2 ];local v192=v82[v84[3]];v82[v191 + (1203 -(373 + 829)) ]=v192;v82[v191]=v192[v84[735 -(476 + 255) ]];elseif (v82[v84[2]]==v82[v84[(90 + 1044) -(369 + 761) ]]) then v76=v76 + 1 + 0 ;else v76=v84[5 -(2 + 0) ];end elseif (v85<=(37 -17)) then if ((386>=137) and ((v85<=(254 -(64 + 174))) or (901>4218))) then if (v85<=(2 + 12)) then local v135=0 -0 ;local v136;while true do if (v135==(336 -(144 + 102 + 90))) then v136=v84[218 -(42 + (581 -(174 + 233))) ];do return v82[v136](v13(v82,v136 + 1 + 0 ,v84[3 + (0 -0) ]));end break;end end elseif ((923==923) and (v85>(7 + 8))) then v82[v84[1506 -(363 + 1141) ]]= #v82[v84[1583 -(1183 + 397) ]];else v82[v84[5 -(4 -1) ]]=v82[v84[3 + 0 + 0 ]]%v82[v84[3 + 1 ]] ;end elseif (v85<=(1993 -(1913 + 62))) then if ((v85==(11 + 6)) or (4173==359)) then local v198=(1174 -(663 + 511)) -0 ;local v199;local v200;local v201;local v202;while true do if (v198==(1934 -(505 + 60 + 1368))) then v77=(v201 + v199) -(1 + 0) ;v202=0 -0 ;v198=1663 -(321 + 1156 + (567 -383)) ;end if ((4779>4047) and (v198==(2 -(0 + 0)))) then for v458=v199,v77 do v202=v202 + 1 + 0 ;v82[v458]=v200[v202];end break;end if ((1722==1722) and ((856 -(564 + 292))==v198)) then v199=v84[2 -0 ];v200,v201=v75(v82[v199](v13(v82,v199 + (2 -1) ,v84[307 -(244 + 60) ])));v198=1 + (0 -0) ;end end else local v203=v84[478 -(41 + 435) ];local v204,v205=v75(v82[v203](v13(v82,v203 + (1002 -(938 + 63)) ,v77)));v77=(v205 + v203) -(1 + 0) ;local v206=(2723 -1598) -(936 + 189) ;for v348=v203,v77 do v206=v206 + 1 + 0 ;v82[v348]=v204[v206];end end elseif ((4050>1373) and (v85>(10 + 9))) then local v207=v84[1615 -((3046 -1481) + 48) ];local v208={};for v351=1 -0 , #v81 do local v352=v81[v351];for v396=0 + 0 + 0 , #v352 do local v397=v352[v396];local v398=v397[1139 -(782 + 33 + 323) ];local v399=v397[269 -(176 + 91) ];if (((v398==v82) and (v399>=v207)) or (1037>4390) or (3994<=3820)) then v208[v399]=v398[v399];v397[2 -1 ]=v208;end end end else v82[v84[2 -0 ]]=v84[1 + 2 ]~=(1092 -(975 + 117)) ;end elseif ((1488<1641) and (1407<=1919) and (v85<=(1898 -(157 + 1718)))) then if (v85<=(1280 -(233 + 1026))) then v82[v84[2 + (722 -(478 + 244)) ]]=v82[v84[(527 -(440 + 77)) -7 ]] + v84[13 -9 ] ;elseif (v85>(1040 -(697 + 321))) then local v210=0 + 0 ;local v211;local v212;while true do if (v210==(2 -1)) then for v464=v211 + (1 -(0 + 0)) ,v84[(21 -15) -3 ] do v7(v212,v82[v464]);end break;end if ((433<=2235) and (2526>=1717) and (v210==((1556 -(655 + 901)) + 0))) then v211=v84[3 -1 ];v212=v82[v211];v210=1;end end else v82[v84[5 -3 ]]= #v82[v84[1230 -(322 + 905) ]];end elseif (v85<=(636 -(602 + 9))) then if (v85>(1392 -(34 + 1334))) then local v214=v84[1191 -(449 + 740) ];v82[v214](v82[v214 + (873 -(154 + 672 + 46)) ]);else v82[v84[949 -(245 + 702) ]]=v84[3]~=(1283 -(1035 + 248)) ;end elseif (v85>((63 + 19) -56)) then if ((v84[1 + 0 + 1 ]==v82[v84[1902 -(260 + 1638) ]]) or (1838>2471)) then v76=v76 + (320 -(134 + 185)) ;else v76=v84[443 -(382 + 58) ];end else for v353=v84[6 -4 ],v84[(11 -8) + 0 ] do v82[v353]=nil;end end elseif (v85<=(84 -43)) then if ((2444<3313) and (v85<=(19 + (1460 -(695 + 750))))) then if ((v85<=(89 -59)) or (3620<=2094)) then if ((v85<=(1233 -(902 + 303))) or (3685<=185)) then v82[v84[6 -4 ]][v84[1382 -((3602 -2547) + 324) ]]=v82[v84[8 -4 ]];elseif ((738<=1959) and (v85>(69 -40))) then local v216=v84[1 + 1 ];v82[v216](v13(v82,v216 + (3 -2) ,v84[9 -6 ]));else do return v82[v84[5 -3 ]];end end elseif ((v85<=(1722 -(1121 + 569))) or (1317==3093)) then if (v85==(245 -(22 + 192))) then for v355=v84[7 -5 ],v84[10 -(10 -3) ] do v82[v355]=nil;end else local v217=v84[685 -(483 + 200) ];v82[v217]=v82[v217](v13(v82,v217 + (1464 -((5646 -4242) + 59)) ,v77));end elseif (v85>33) then v82[v84[5 -3 ]]=v82[v84[7 -4 ]] -v82[v84[4 -(351 -(285 + 66)) ]] ;else v82[v84[2]]=v82[v84[1 + 2 ]] -v82[v84[769 -(468 + 297) ]] ;end elseif ((v85<=(599 -(334 + 228))) or (1723>=2447)) then if ((v85<=(118 -83)) or (1199>3543)) then local v140=0 -0 ;local v141;while true do if ((1617<3271) and (v140==(0 -0))) then v141=v84[(2960 -1690) -(1249 + 19) ];do return v13(v82,v141,v77);end break;end end elseif ((v85>(64 -28)) or (2611>=4435)) then v82[v84[1 + 1 ]]=v62[v84[(1549 -(682 + 628)) -(23 + 118 + 95) ]];else local v223=0 -0 ;local v224;local v225;local v226;local v227;while true do if ((v223==1) or (117>4925)) then v77=(v226 + v224) -(1 + 0) ;v227=0 -0 ;v223=4 -2 ;end if ((1 + 1)==v223) then for v465=v224,v77 do v227=v227 + (2 -1) ;v82[v465]=v225[v227];end break;end if (v223==0) then v224=v84[2 + 0 ];v225,v226=v75(v82[v224]());v223=1 + 0 ;end end end elseif (v85<=(1 + 38)) then if (v85>((422 -(176 + 123)) -85)) then local v228=v84[472 -(224 + 246) ];local v229=v82[v84[4 -1 ]];v82[v228 + (1 -0) ]=v229;v82[v228]=v229[v82[v84[3 + 1 ]]];else do return;end end elseif (v85==(1 + 39)) then v82[v84[165 -(92 + 71) ]][v82[v84[1 + 1 + 1 ]]]=v84[(5 + 1) -2 ];else v82[v84[767 -(574 + 191) ]]=v82[v84[516 -((472 -(239 + 30)) + 310) ]][v82[v84[4 + 0 ]]];end elseif ((3085>1166) and (v85<=(120 -72))) then if (v85<=(23 + 21)) then if ((4493>=3603) and (v85<=(891 -(254 + 595)))) then v82[v84[2]]=v82[v84[3 -(0 + 0) ]][v84[130 -(55 + 69 + 2) ]];elseif ((107<=4905) and (v85>(169 -126))) then v82[v84[2 -0 ]]=v84[1793 -(573 + 1217) ];else local v239=v84[5 -3 ];v82[v239](v13(v82,v239 + ((1475 -641) -(171 + 662)) ,v77));end elseif (v85<=(4 + 42)) then if (v85>((489 -332) -112)) then if v82[v84[2 -0 ]] then v76=v76 + (940 -(714 + 225)) ;else v76=v84[8 -5 ];end else v82[v84[1488 -(35 + 1451) ]]=v82[v84[3 -0 ]]%v82[v84[1 + 3 ]] ;end elseif (v85>(46 + 1)) then v82[v84[2 -0 ]]=v82[v84[809 -(118 + 688) ]] + v84[52 -(25 + 23) ] ;else local v242=0 + 0 ;local v243;while true do if ((v242==(1886 -(927 + 959))) or (1004>4035)) then v243=v84[2];v82[v243]=v82[v243](v13(v82,v243 + (3 -2) ,v77));break;end end end elseif ((v85<=(51 + 0)) or (2802<369)) then if (v85<=((1096 -(306 + 9)) -(16 + 716))) then local v144=v84[5 -2 ];local v145=v82[v144];for v162=v144 + (98 -(11 + 86)) ,v84[9 -5 ] do v145=v145   .. v82[v162] ;end v82[v84[287 -(175 + 110) ]]=v145;elseif (v85==(126 -76)) then v82[v84[9 -(24 -17) ]]=v82[v84[1799 -(503 + 1293) ]];elseif ((1497<=2561) and (v82[v84[2 + 0 ]]==v84[11 -7 ])) then v76=v76 + (1 -0) ;else v76=v84[3 + 0 ];end elseif (((2843<=2975) and (v85<=(1114 -(810 + 251)))) or (816>1712)) then if ((v85>(37 + 15)) or (2733==2971)) then v82[v84[1208 -(129 + 612 + 465) ]]=v84[1 + 2 ] + v82[v84[4 + 0 ]] ;else local v247=533 -(43 + 301 + 189) ;local v248;while true do if ((2599<4050) and (v247==(733 -(711 + 22)))) then v248=v84[7 -5 ];v82[v248]=v82[v248](v13(v82,v248 + (860 -(240 + 619)) ,v84[1 + 2 ]));break;end end end elseif ((2034==2034) and (v85>(85 -31))) then if ((v82[v84[1 + 1 + 0 ]]==v82[v84[1748 -(1344 + 400) ]]) or (1989<=174)) then v76=v76 + (406 -(255 + 150)) ;else v76=v84[3 + 0 ];end else local v249=0 + 0 ;local v250;local v251;local v252;while true do if (v249==(0 -0)) then v250=v84[6 -4 ];v251={v82[v250](v82[v250 + (407 -(183 + 223)) ])};v249=1 -0 ;end if (v249==((11 -7) -3)) then v252=1780 -(389 + 1391) ;for v468=v250,v84[3 + 1 ] do v252=v252 + 1 + (1375 -(1140 + 235)) 
+local Remotes = ReplicatedStorage.Remotes
+local Functions = Remotes.Functions
+local Events = Remotes.Events
+
+local CombatRemote = Functions.CombatRF
+local CollectionRemote = Functions.CollectionRF
+local HatchRemote = Events.HatchEggEvent
+local PlantRemote = Events.PlantEggEvent
+local ZonesRemote = Functions.ZonesRF
+local FeedRemote = Events.FeedEggEvent
+local SacrificeRemote = Functions.SacrificeFunction
+
+local active = false
+local cacheZones = {}
+local eggsSelected = {}
+local bossEnabled = {}
+local loopFlags = {}
+
+local sacrificeSummer = {
+    ["Queen Bee"] = false,
+    ["King Bee"] = false
+}
+local sacrificeWinter = {
+    ["Frozen Werewolf"] = false,
+    ["Walrus"] = false
+}
+
+local config = {
+    autoPlant = true,
+    plantBurstCount = 9,
+    plantBurstDelay = 0.001,
+    autoHash = true,
+    hashCount = 1,
+    hashDelay = 0.0001,
+    autoFeedNests = true,
+    feedDelay = 0.001,
+    farmBosses = true,
+    bossDelay = 0.8,
+    farmSummer = true,
+    summerDelay = 0.05,
+    farmWinter = true,
+    winterDelay = 0.05,
+    farmFood = true,
+    foodDelay = 0.05,
+}
+
+local eggData = {
+    { name = "Summer Egg", zone = "SummerEvent1" },
+    { name = "Winter Egg", zone = "WinterEvent1" },
+    { name = "Draco Egg", zone = "34" },
+    { name = "Crystal Egg", zone = "12.1" },
+    { name = "Sphinx Egg", zone = "EleEgg1" },
+    { name = "Octopus Egg", zone = "30" },
+    { name = "Tiki Egg", zone = "30" },
+    { name = "Sky Egg", zone = "15" },
+    { name = "Void Egg", zone = "27" },
+    { name = "Desert Egg", zone = "6" },
+}
+
+local bossList = {
+    { name = "Naga", zone = "Zone2B1", special = false },
+    { name = "Lava Monster", zone = "Zone5B1", special = false },
+    { name = "Ghost Pirate", zone = "Zone8B1", special = true, nilBoss = true },
+    { name = "Tiki Monster", zone = "Zone10B1", special = false },
+    { name = "The Big 100M", zone = "Zone12B3", special = false },
+    { name = "The Frozen Ancient", zone = "Zone12B1", special = false },
+    { name = "The Ethereal Everia", zone = "Zone12B2", special = false },
+    { name = "Hornet Boss", zone = "SummerEventZoneB1", special = true },
+    { name = "The Ice Serpent", zone = "WinterEventZoneB1", special = false },
+    { name = "Great Sphinx", zone = "ElementEventZoneB1", special = false },
+}
+for _, v in ipairs(bossList) do bossEnabled[v.name] = true end
+
+local bossCooldown = {}
+for _, v in ipairs(bossList) do bossCooldown[v.name] = 0 end
+
+local function getZone(zoneName)
+    if not cacheZones[zoneName] then
+        cacheZones[zoneName] = Workspace.Zones:FindFirstChild(zoneName)
+    end
+    return cacheZones[zoneName]
+end
+
+local function getPets()
+    if not LocalPlayer.Character then return {} end
+    local pets = LocalPlayer.Character:FindFirstChild("Pets")
+    return pets and pets:GetChildren() or {}
+end
+
+local function findNilBoss(name)
+    for _, v in pairs(getnilinstances()) do
+        if v.ClassName == "Vector3Value" and v.Name == name then return v end
+    end
+end
+
+task.spawn(function() while task.wait(300) do cacheZones = {} end end)
+
+local function plantLoop()
+    while loopFlags.plant and active and config.autoPlant do
+        if #eggsSelected > 0 then
+            for _, zone in ipairs(eggsSelected) do
+                for _ = 1, config.plantBurstCount do
+                    if not active or not loopFlags.plant then break end
+                    pcall(PlantRemote.FireServer, PlantRemote, zone)
+                end
+                task.wait(config.plantBurstDelay)
+            end
+        end
+        task.wait()
+    end
+end
+
+local function hashLoop()
+    while loopFlags.hash and active and config.autoHash do
+        for _ = 1, config.hashCount do
+            if not active or not loopFlags.hash then break end
+            pcall(HatchRemote.FireServer, HatchRemote)
+            task.wait(config.hashDelay)
+        end
+        task.wait()
+    end
+end
+
+local function feedLoop()
+    while loopFlags.feed and active and config.autoFeedNests do
+        local nests = Workspace:FindFirstChild("Nests")
+        if nests then
+            for _, nest in ipairs(nests:GetChildren()) do
+                if not active or not loopFlags.feed then break end
+                pcall(FeedRemote.FireServer, FeedRemote, nest)
+            end
+        end
+        task.wait(config.feedDelay)
+    end
+end
+
+local function summerLoop()
+    while loopFlags.summer and active and config.farmSummer do
+        local zone = getZone("SummerEventZone")
+        local pets = getPets()
+        if zone and zone:FindFirstChild("Enemies") and #pets > 0 then
+            local enemies = zone.Enemies:GetChildren()
+            if #enemies > 0 then
+                local idx = 1
+                for _, enemy in ipairs(enemies) do
+                    if not active or not loopFlags.summer then break end
+                    pcall(CombatRemote.InvokeServer, CombatRemote, "AttackEnemy", enemy, pets[idx])
+                    idx = idx % #pets + 1
+                end
+            end
+        end
+        task.wait(config.summerDelay)
+    end
+end
+
+local function winterLoop()
+    while loopFlags.winter and active and config.farmWinter do
+        pcall(ZonesRemote.InvokeServer, ZonesRemote, "RequestZoneMap", "WinterEventZone")
+        local zone = getZone("WinterEventZone")
+        local pets = getPets()
+        if zone and zone:FindFirstChild("Enemies") and #pets > 0 then
+            local enemies = zone.Enemies:GetChildren()
+            if #enemies > 0 then
+                local idx = 1
+                for _, enemy in ipairs(enemies) do
+                    if not active or not loopFlags.winter then break end
+                    pcall(CombatRemote.InvokeServer, CombatRemote, "AttackEnemy", enemy, pets[idx])
+                    idx = idx % #pets + 1
+                end
+            end
+        end
+        task.wait(config.winterDelay)
+    end
+end
+
+local function sacrificeLoop()
+    while loopFlags.sacrifice and active do
+        for petName, enabled in pairs(sacrificeSummer) do
+            if enabled then
+                pcall(SacrificeRemote.InvokeServer, SacrificeRemote, "SacrificeWell", petName)
+            end
+        end
+        for petName, enabled in pairs(sacrificeWinter) do
+            if enabled then
+                pcall(SacrificeRemote.InvokeServer, SacrificeRemote, "SacrificeWell", petName)
+            end
+        end
+        task.wait(0.1)
+    end
+end
+
+local function foodLoop()
+    while loopFlags.food and active and config.farmFood do
+        local zone = getZone("Zone12.1")
+        local pets = getPets()
+        if zone and zone:FindFirstChild("FoodSpawns") and #pets > 0 then
+            local foods = zone.FoodSpawns:GetChildren()
+            if #foods > 0 then
+                local idx = 1
+                for _, food in ipairs(foods) do
+                    if not active or not loopFlags.food then break end
+                    pcall(CollectionRemote.InvokeServer, CollectionRemote, "CollectFood", food, pets[idx])
+                    idx = idx % #pets + 1
+                end
+            end
+        end
+        task.wait(config.foodDelay)
+    end
+end
+
+local function bossLoop()
+    while loopFlags.boss and active and config.farmBosses do
+        local pets = getPets()
+        if #pets > 0 then
+            local now = os.clock()
+            local petCycle = 0
+            for _, boss in ipairs(bossList) do
+                if not active or not loopFlags.boss then break end
+                if bossEnabled[boss.name] and now - bossCooldown[boss.name] >= config.bossDelay then
+                    if boss.special then
+                        pcall(ZonesRemote.InvokeServer, ZonesRemote, "RequestZoneMap", boss.zone)
+                    end
+                    local enemy
+                    if boss.nilBoss then
+                        enemy = findNilBoss(boss.name)
+                    else
+                        local zoneObj = getZone(boss.zone)
+                        enemy = zoneObj and zoneObj:FindFirstChild("Enemies") and zoneObj.Enemies:FindFirstChild(boss.name)
+                    end
+                    if enemy then
+                        petCycle = petCycle % #pets + 1
+                        pcall(CombatRemote.InvokeServer, CombatRemote, "AttackEnemy", enemy, pets[petCycle])
+                        bossCooldown[boss.name] = now
+                    end
+                end
+            end
+        end
+        task.wait(0.1)
+    end
+end
+
+local function startAllLoops()
+    loopFlags = {
+        plant = true,
+        hash = true,
+        feed = true,
+        boss = true,
+        summer = true,
+        winter = true,
+        food = true,
+        sacrifice = true,
+    }
+    if config.autoPlant then task.spawn(plantLoop) end
+    if config.autoHash then task.spawn(hashLoop) end
+    if config.autoFeedNests then task.spawn(feedLoop) end
+    if config.farmBosses then task.spawn(bossLoop) end
+    if config.farmSummer then task.spawn(summerLoop) end
+    if config.farmWinter then task.spawn(winterLoop) end
+    if config.farmFood then task.spawn(foodLoop) end
+    task.spawn(sacrificeLoop)
+end
+
+local function stopAllLoops()
+    loopFlags = {}
+end
+
+local function start()
+    if active then return end
+    active = true
+    startAllLoops()
+end
+
+local function stop()
+    active = false
+    stopAllLoops()
+end
+
+local win = Rayfield:CreateWindow({
+    Name = "Maverick Hub",
+    LoadingTitle = "Loading...",
+    LoadingSubtitle = "Maximum Speed (optimized)",
+    ConfigurationSaving = { Enabled = true, FolderName = "MaverickHub", FileName = "Config" },
+    Theme = "Dark"
+})
+
+local mainTab = win:CreateTab("Main")
+local eggTab = win:CreateTab("Eggs")
+local bossTab = win:CreateTab("Bosses")
+local farmTab = win:CreateTab("Farms")
+local sacrificeTab = win:CreateTab("Sacrifices")
+
+mainTab:CreateSection("Control")
+mainTab:CreateButton({ Name = "Start", Callback = start })
+mainTab:CreateButton({ Name = "Stop", Callback = stop })
+
+mainTab:CreateSection("Status")
+local st1 = mainTab:CreateLabel("Status: Stopped")
+local st2 = mainTab:CreateLabel("Bosses: OFF")
+local st3 = mainTab:CreateLabel("Summer: OFF")
+local st4 = mainTab:CreateLabel("Winter: OFF")
+local st5 = mainTab:CreateLabel("Food: OFF")
+local st6 = mainTab:CreateLabel("Eggs: OFF")
+
+task.spawn(function()
+    while true do
+        task.wait(0.5)
+        if active then
+            st1:Set("Status: Active")
+            st2:Set("Bosses: " .. (config.farmBosses and "ON" or "OFF"))
+            st3:Set("Summer: " .. (config.farmSummer and "ON" or "OFF"))
+            st4:Set("Winter: " .. (config.farmWinter and "ON" or "OFF"))
+            st5:Set("Food: " .. (config.farmFood and "ON" or "OFF"))
+            st6:Set("Eggs: " .. (config.autoPlant and "ON" or "OFF"))
+        else
+            st1:Set("Status: Stopped")
+            st2:Set("Bosses: OFF")
+            st3:Set("Summer: OFF")
+            st4:Set("Winter: OFF")
+            st5:Set("Food: OFF")
+            st6:Set("Eggs: OFF")
+        end
+    end
+end)
+
+eggTab:CreateSection("Egg Control")
+eggTab:CreateToggle({
+    Name = "Enable Egg Farming",
+    CurrentValue = config.autoPlant,
+    Callback = function(v)
+        config.autoPlant = v
+        config.autoHash = v
+        config.autoFeedNests = v and config.autoFeedNests
+    end
+})
+
+eggTab:CreateSection("Select Eggs")
+for _, egg in ipairs(eggData) do
+    eggTab:CreateToggle({
+        Name = egg.name,
+        CurrentValue = false,
+        Callback = function(val)
+            if val then
+                if not table.find(eggsSelected, egg.zone) then
+                    table.insert(eggsSelected, egg.zone)
+                end
+            else
+                local idx = table.find(eggsSelected, egg.zone)
+                if idx then table.remove(eggsSelected, idx) end
+            end
+        end,
+    })
+end
+
+eggTab:CreateSection("Auto Hash")
+eggTab:CreateToggle({ Name = "Enable Hash", CurrentValue = config.autoHash, Callback = function(v) config.autoHash = v end })
+eggTab:CreateSlider({ Name = "Amount", Range = {1, 1}, Increment = 1, Suffix = "x", CurrentValue = config.hashCount, Callback = function(v) config.hashCount = v end })
+eggTab:CreateSlider({ Name = "Delay (s)", Range = {0.0001, 0.001}, Increment = 0.0001, Suffix = "s", CurrentValue = config.hashDelay, Callback = function(v) config.hashDelay = v end })
+
+eggTab:CreateSection("Auto Plant")
+eggTab:CreateToggle({ Name = "Enable Plant", CurrentValue = config.autoPlant, Callback = function(v) config.autoPlant = v end })
+eggTab:CreateSlider({ Name = "Eggs per burst", Range = {9, 9}, Increment = 1, Suffix = "x", CurrentValue = config.plantBurstCount, Callback = function(v) config.plantBurstCount = v end })
+eggTab:CreateSlider({ Name = "Burst delay (s)", Range = {0.001, 0.1}, Increment = 0.001, Suffix = "s", CurrentValue = config.plantBurstDelay, Callback = function(v) config.plantBurstDelay = v end })
+
+eggTab:CreateSection("Auto Nests")
+eggTab:CreateToggle({ Name = "Enable Nests", CurrentValue = config.autoFeedNests, Callback = function(v) config.autoFeedNests = v end })
+eggTab:CreateSlider({ Name = "Delay (s)", Range = {0.001, 0.01}, Increment = 0.001, Suffix = "s", CurrentValue = config.feedDelay, Callback = function(v) config.feedDelay = v end })
+
+eggTab:CreateSection("Remove AutoHash UI")
+eggTab:CreateButton({
+    Name = "Remove Hatch Animation Event",
+    Callback = function()
+        local events = ReplicatedStorage:FindFirstChild("Remotes") and ReplicatedStorage.Remotes:FindFirstChild("Events")
+        if events then
+            local oldEvent = events:FindFirstChild("HatchAnimationEvent")
+            if oldEvent then
+                oldEvent:Destroy()
+            end
+        end
+    end
+})
+
+bossTab:CreateSection("Boss Control")
+bossTab:CreateToggle({
+    Name = "Enable Boss Farming",
+    CurrentValue = config.farmBosses,
+    Callback = function(v) config.farmBosses = v end
+})
+
+bossTab:CreateSection("Select Bosses")
+for _, boss in ipairs(bossList) do
+    bossTab:CreateToggle({
+        Name = boss.name,
+        CurrentValue = bossEnabled[boss.name],
+        Callback = function(v) bossEnabled[boss.name] = v end,
+    })
+end
+bossTab:CreateSlider({ Name = "Cooldown (s)", Range = {0.5, 2}, Increment = 0.1, Suffix = "s", CurrentValue = config.bossDelay, Callback = function(v) config.bossDelay = v end })
+
+farmTab:CreateSection("Summer Event")
+farmTab:CreateToggle({
+    Name = "Enable Summer Farm",
+    CurrentValue = config.farmSummer,
+    Callback = function(v) config.farmSummer = v end
+})
+farmTab:CreateSlider({ Name = "Delay (s)", Range = {0.01, 1}, Increment = 0.01, Suffix = "s", CurrentValue = config.summerDelay, Callback = function(v) config.summerDelay = v end })
+
+farmTab:CreateSection("Winter Event")
+farmTab:CreateToggle({
+    Name = "Enable Winter Farm",
+    CurrentValue = config.farmWinter,
+    Callback = function(v) config.farmWinter = v end
+})
+farmTab:CreateSlider({ Name = "Delay (s)", Range = {0.01, 1}, Increment = 0.01, Suffix = "s", CurrentValue = config.winterDelay, Callback = function(v) config.winterDelay = v end })
+
+farmTab:CreateSection("Food Farm")
+farmTab:CreateToggle({
+    Name = "Enable Food Farm",
+    CurrentValue = config.farmFood,
+    Callback = function(v) config.farmFood = v end
+})
+farmTab:CreateSlider({ Name = "Delay (s)", Range = {0.01, 1}, Increment = 0.01, Suffix = "s", CurrentValue = config.foodDelay, Callback = function(v) config.foodDelay = v end })
+
+sacrificeTab:CreateSection("Summer Event Sacrifices")
+sacrificeTab:CreateToggle({
+    Name = "Queen Bee (Mythical) - Loop",
+    CurrentValue = sacrificeSummer["Queen Bee"],
+    Callback = function(v) sacrificeSummer["Queen Bee"] = v end
+})
+sacrificeTab:CreateButton({
+    Name = "Sacrifice Queen Bee (Once)",
+    Callback = function()
+        pcall(SacrificeRemote.InvokeServer, SacrificeRemote, "SacrificeWell", "Queen Bee")
+    end
+})
+sacrificeTab:CreateToggle({
+    Name = "King Bee (Legendary) - Loop",
+    CurrentValue = sacrificeSummer["King Bee"],
+    Callback = function(v) sacrificeSummer["King Bee"] = v end
+})
+sacrificeTab:CreateButton({
+    Name = "Sacrifice King Bee (Once)",
+    Callback = function()
+        pcall(SacrificeRemote.InvokeServer, SacrificeRemote, "SacrificeWell", "King Bee")
+    end
+})
+
+sacrificeTab:CreateSection("Winter Event Sacrifices")
+sacrificeTab:CreateToggle({
+    Name = "Frozen Werewolf (Mythical) - Loop",
+    CurrentValue = sacrificeWinter["Frozen Werewolf"],
+    Callback = function(v) sacrificeWinter["Frozen Werewolf"] = v end
+})
+sacrificeTab:CreateButton({
+    Name = "Sacrifice Frozen Werewolf (Once)",
+    Callback = function()
+        pcall(SacrificeRemote.InvokeServer, SacrificeRemote, "SacrificeWell", "Frozen Werewolf")
+    end
+})
+sacrificeTab:CreateToggle({
+    Name = "Walrus (Legendary) - Loop",
+    CurrentValue = sacrificeWinter["Walrus"],
+    Callback = function(v) sacrificeWinter["Walrus"] = v end
+})
+sacrificeTab:CreateButton({
+    Name = "Sacrifice Walrus (Once)",
+    Callback = function()
+        pcall(SacrificeRemote.InvokeServer, SacrificeRemote, "SacrificeWell", "Walrus")
+    end
+})
