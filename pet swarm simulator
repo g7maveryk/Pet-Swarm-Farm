@@ -115,6 +115,8 @@ end
 
 task.spawn(function() while task.wait(300) do cacheZones = {} end end)
 
+-- ========== INDIVIDUAL PARALLEL LOOPS ==========
+
 local function plantLoop()
     while loopFlags.plant and active and config.autoPlant do
         if #eggsSelected > 0 then
@@ -437,7 +439,12 @@ eggTab:CreateButton({
             local oldEvent = events:FindFirstChild("HatchAnimationEvent")
             if oldEvent then
                 oldEvent:Destroy()
+                print("HatchAnimationEvent removed successfully.")
+            else
+                print("HatchAnimationEvent not found.")
             end
+        else
+            print("Remotes.Events not found.")
         end
     end
 })
@@ -544,4 +551,10 @@ sacrificeTab:CreateButton({
 sacrificeTab:CreateToggle({
     Name = "Walrus (Legendary) - Loop",
     CurrentValue = sacrificeWinter["Walrus"],
-    Callback = function(v) sacrificeWinter["Walrus"] = v 
+    Callback = function(v) sacrificeWinter["Walrus"] = v end
+})
+sacrificeTab:CreateButton({
+    Name = "Sacrifice Walrus (Once)",
+    Callback = function()
+        pcall(SacrificeRemote.InvokeServer, SacrificeRemote, "SacrificeWell", "Walrus")
+    end
